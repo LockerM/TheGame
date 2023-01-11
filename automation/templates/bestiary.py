@@ -137,6 +137,10 @@ class Attribs:
         """Return flatted dict {'Attrib_example': value} pairs for csv export"""
         return flatten_embedded(dict(Attrib=self.__dict__))
 
+    def __repr__(self):
+        """Print non-default beast items with repr property and linebreaks"""
+        return my_repr(self, seperator=", ", indent=0)
+
 
 @dataclass(order=True)
 class Skills:
@@ -177,6 +181,10 @@ class Skills:
         """Return flatted dict {'Skill_example': value} pairs for csv export"""
         return flatten_embedded(dict(Skill=self.__dict__))
 
+    def __repr__(self):
+        """Print non-default beast items with repr property and linebreaks"""
+        return my_repr(self, seperator=", ", indent=0)
+
 
 @dataclass(order=True)
 class Phase:
@@ -187,6 +195,10 @@ class Phase:
     Order: int = field(repr=False)
     HP: int = 1
     Allies: List[str] = field(default=None)
+
+    def __repr__(self):
+        """Print non-default beast items with repr property and linebreaks"""
+        return my_repr(self, indent=1)
 
 
 @dataclass(order=True)
@@ -208,12 +220,12 @@ class Beast:
     AR: int = field(default=None)
     PP: int = 0  # TODO: migrate to post-init, sum PP from all available powers
     Speed: int = 6
+    Primary_Skill: str = field(default=None)
     Attribs: dict = field(default=None)
     Skills: dict = field(default=None)
     Powers: dict = field(default=None, repr=False)
-    Powers_list: list = field(default_factory=list)
+    Powers_list: list = field(default_factory=list, repr=False)
     Phases: list = field(default=None)
-    Primary_Skill: str = field(default=None)
     Description: str = ""
 
     def __post_init__(self):
@@ -225,7 +237,14 @@ class Beast:
         self.Skills = Skills(**self.Skills) if self.Skills else None
         self.Phases = self.fetch_phases() if self.Phases else None
         self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
-        self.RestCards = self.HP + self.PP
+        self.HP_Max = self.HP  # assume providing max when initializing
+        self.AP_Max = self.AP
+        self.AR_Max = self.AR
+        self.PP_Max = self.PP
+        self.Speed_Max = self.Speed
+        self.RestCards = self.HP
+        self.RestCards_Max = self.HP
+
         self.override_stats()
 
     def fetch_powers(self) -> dict:
@@ -337,11 +356,11 @@ class Beast:
         # TODO: Modify so it aligns with how markdown takes top_level_stats
         # Why separate AR for the PC sheet but not the markdown?
         return [
-            ("HP", self.HP),
-            ("AP", self.AP),
-            ("PP", self.PP),
-            ("Speed", self.Speed),
-            ("Rest Cards", self.RestCards),
+            ("HP", self.HP, self.HP_Max),
+            ("AP", self.AP, self.AP_Max),
+            ("PP", self.PP, self.PP_Max),
+            ("Speed", self.Speed, self.Speed_Max),
+            ("Rest Cards", self.RestCards, self.RestCards_Max),
         ]
 
     def _html(self, items=None):
