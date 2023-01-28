@@ -372,15 +372,67 @@ class Beast:
 
         assert self.Type in ["PC", "Dealer"], "Can only make html for PCs"
 
+        # pc_id=['Clubs2, Kvothe']
+
+        # items=[{"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
+        #         {"name": "Shield", "quantity": "1", "info": "Heavy Shield. 2 AP."},
+        #         {"name": "Dumbbell Maul", "quantity": "1", "info": "1 damage. 1 handed."},
+        #         {"name": "Backpack (Bedroll+Tent)", "quantity": "1", "info": ""},
+        #     {"name": "Torches + Flint/Tinder", "quantity": "5", "info": ""},
+        # ],[
+        #     {"name": "Staff", "quantity": "1", "info": "1 damage. 2 handed."},
+        #     {"name": "Crystal Amulet", "quantity": "1", "info": "Powerful healing artifact."},
+        #     {"name": "Loose Crystals", "quantity": "5", "info": ""},
+        #     {"name": "Backpack (Bedroll+Tent)", "quantity": "1", "info": ""},
+        #     {"name": "Torches + Flint/Tinder", "quantity": "5", "info": ""},
+        #         ]
+
+        # for pc_id, items in zip(pc_id, items):
+        #     Bestiary().as_dict[pc_id].make_pc_img(items=items)
+
         default_items = (
             self.Items
             if self.Items
             else [
                 {"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
                 {"name": "Shield", "quantity": "1", "info": "Heavy Shield. 2 AP."},
-                {"name": "Shortsword", "quantity": "1", "info": "1 damage. 1 handed."},
-                {"name": "Maul", "quantity": "1", "info": "2 damage. 2 handed."},
+                {"name": "Dumbbell Maul", "quantity": "1", "info": "1 damage. 1 handed."},
+                {"name": "Backpack (Bedroll+Tent)", "quantity": "1", "info": ""},
+                {"name": "Torches + Flint/Tinder", "quantity": "5", "info": ""},
+                
             ]
+        )
+
+                # {"name": "Backpack", "quantity": "1", "info": ""},
+                # {"name": "Torches", "quantity": "5", "info": ""},
+                # {"name": "Flint and Tinder", "quantity": "1", "info": ""},
+                # {"name": "Bedroll", "quantity": "1", "info": ""},
+                # {"name": "Tent", "quantity": "1", "info": ""},
+                
+
+        clubs_items = (
+                {"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
+                {"name": "Shield", "quantity": "1", "info": "Heavy Shield. 2 AP."},
+                {"name": "Dumbbell Maul", "quantity": "1", "info": "1 damage. 1 handed."}
+        )
+
+        spades_items = (
+                {"name": "Golden Goddess", "quantity": "1", "info": "1 damage. 1 handed."},
+                {"name": "Silver Serpent", "quantity": "1", "info": "1 damage. 1 handed."},
+                {"name": "Dagger", "quantity": "1", "info": "1 damage. 1 handed."},
+                {"name": "Crossbow + Bolts", "quantity": "1", "info": "1 damage. 2 handed. Range 6."},
+        )
+
+        diamonds_items = (
+                {"name": "Staff", "quantity": "1", "info": "1 damage. 2 handed."},
+                {"name": "Lute", "quantity": "1", "info": ""},
+                {"name": "Scroll Case", "quantity": "1", "info": "1 damage. 1 handed."},
+        )
+
+        hearts_items = (
+                {"name": "Staff", "quantity": "1", "info": "1 damage. 2 handed."},
+                {"name": "Crystal Amulet", "quantity": "1", "info": "Powerful healing artifact."},
+                {"name": "Loose Crystals", "quantity": "5", "info": ""},
         )
 
         return (
@@ -421,7 +473,7 @@ class Beast:
         hti = Html2Image()
 
         hti.output_path, output_filename = self._pc_file_info(".png")
-        hti.size = (950, 1200)
+        hti.size = (950, 1500)
         hti.screenshot(
             html_str=self._html(items),
             save_as=output_filename,
