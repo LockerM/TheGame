@@ -32,39 +32,6 @@ Template:               # must be unique
       Allies: X         # List of who appears. If multiple of same, list multiple times
   Description: Descrip  # Full descriptive text
 
-# Clubs1:
-#   Name: Clubs
-#   Type: PC
-#   Pronouns: "He/Him"
-#   Role: Defender
-#   Level: 1
-#   Primary_Skill: Brute
-#   HP: 7
-#   AP: 2
-#   PP: 2
-#   Attribs:
-#     AGL: 1
-#     GUT: 1
-#     INT: -1
-#     STR: 1
-#     VIT: 1
-#   Skills:
-#     Finesse: 1
-#     Stealth: 1
-#     Knowledge: -1
-#     Investigation: -1
-#     Athletics: 1
-#     Brute: 1
-#   Powers:
-#     - Attack, Weapon
-#     - Attack, Charge
-#     # - Shield, Self
-#     - Attack, Dual-Wield
-#     - Momentum
-#     - Dumb
-#     - Sweep
-#     - Drown
-
 Spider Queen:
   Type: Boss
   Level: 2
@@ -199,3 +166,844 @@ Mystic Caster:
     - Attack, Mystic Confusion
     - Attack, Mystic Entangle
   Description: A powerful Caster with access to mystic attacks.
+
+Clubs1:
+  id: Clubs1
+  Name: Clubs1
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 1
+  Primary_Skill: STR
+  HP: 6
+  AP: 2
+  PP: 2
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 0
+    GUT: 0
+    INT: 0
+    STR: 2
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Athletics: 2
+    Brute: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Momentum
+    - Shield, Self
+    - Oath
+    - Bloodthirsty
+
+Clubs2:
+  id: Clubs2
+  Name: Clubs2
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 2
+  Primary_Skill: STR
+  HP: 7
+  AP: 2
+  PP: 3
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 0
+    GUT: 0
+    INT: 0
+    STR: 2
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Athletics: 2
+    Brute: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Momentum
+    - Momentum Aura
+    - Shield, Self
+    - Oath
+    - Bloodthirsty
+
+Clubs3:
+  id: Clubs3
+  Name: Clubs3
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 3
+  Primary_Skill: STR
+  HP: 8
+  AP: 2
+  PP: 5
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 0
+    GUT: 0
+    INT: 0
+    STR: 2
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Athletics: 2
+    Brute: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Attack, Charge
+    - Momentum
+    - Momentum Aura
+    - Shield, Self
+    - Oath
+    - Bloodthirsty
+
+Diamonds1:
+  id: Diamonds1
+  Name: Diamonds1
+  Type: PC
+  Pronouns: "She/Her"
+  Role: Caster
+  Level: 1
+  Primary_Skill: INT
+  HP: 6
+  AP: 0
+  PP: 3
+  AR: 3
+  Speed: 4
+  Attribs:
+    AGL: 0
+    CON: 0
+    GUT: 0
+    INT: 2
+    STR: -2
+    VIT: 1
+  Skills:
+    Bluffing: 1
+    Knowledge: 2
+    Investigation: 2
+    Athletics: -2
+    Brute: -2
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Cone
+    - Attack, Mystic Entangle
+    - Lucky
+    - Frail Form
+    - Weak, Major
+
+Diamonds2:
+  id: Diamonds2
+  Name: Diamonds2
+  Type: PC
+  Pronouns: "She/Her"
+  Role: Caster
+  Level: 2
+  Primary_Skill: INT
+  HP: 7
+  AP: 0
+  PP: 4
+  AR: 3
+  Speed: 4
+  Attribs:
+    AGL: 0
+    CON: 0
+    GUT: 0
+    INT: 2
+    STR: -2
+    VIT: 1
+  Skills:
+    Bluffing: 2
+    Knowledge: 2
+    Investigation: 2
+    Athletics: -2
+    Brute: -2
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Cone
+    - Attack, Mystic Entangle
+    - Lucky
+    - Scrying
+    - Frail Form
+    - Weak, Major
+
+Diamonds3:
+  id: Diamonds3
+  Name: Diamonds3
+  Type: PC
+  Pronouns: "She/Her"
+  Role: Caster
+  Level: 3
+  Primary_Skill: INT
+  HP: 8
+  AP: 0
+  PP: 6
+  AR: 3
+  Speed: 4
+  Attribs:
+    AGL: 0
+    CON: 0
+    GUT: 0
+    INT: 2
+    STR: -2
+    VIT: 1
+  Skills:
+    Bluffing: 2
+    Knowledge: 2
+    Investigation: 2
+    Athletics: -2
+    Brute: -2
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Cone
+    - Attack, Mystic Entangle
+    - Lucky
+    - Scrying
+    - Illusion
+    - Frail Form
+    - Weak, Major
+
+Hearts1:
+  id: Hearts1
+  Name: Hearts1
+  Type: PC
+  Pronouns: "They/Them"
+  Role: Support
+  Level: 1
+  Primary_Skill: GUT
+  HP: 4
+  AP: 0
+  PP: 6
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: -1
+    CON: 0
+    GUT: 2
+    INT: 0
+    STR: 0
+    VIT: -1
+  Skills:
+    Finesse: -1
+    Stealth: -1
+    Bluffing: 1
+    Detection: 2
+    Craft: 2
+  Powers:
+    - Lend Aid
+    - Attack, Mystic
+    - Attack, Mystic Entangle
+    - Heal
+    - Shield, Others
+    - Outsider
+    - Frail, Minor
+    - Clumsy, Minor
+
+Hearts2:
+  id: Hearts2
+  Name: Hearts2
+  Type: PC
+  Pronouns: "They/Them"
+  Role: Support
+  Level: 2
+  Primary_Skill: GUT
+  HP: 6
+  AP: 0
+  PP: 6
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: -1
+    CON: 0
+    GUT: 2
+    INT: 0
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: -1
+    Bluffing: 1
+    Detection: 2
+    Craft: 2
+  Powers:
+    - Lend Aid
+    - Attack, Mystic
+    - Attack, Mystic Entangle
+    - Heal
+    - Shield, Others
+    - Outsider
+    - Clumsy, Minor
+
+Hearts3:
+  id: Hearts3
+  Name: Hearts3
+  Type: PC
+  Pronouns: "They/Them"
+  Role: Support
+  Level: 3
+  Primary_Skill: GUT
+  HP: 7
+  AP: 0
+  PP: 8
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: -1
+    CON: 0
+    GUT: 2
+    INT: 0
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: -1
+    Bluffing: 1
+    Detection: 2
+    Craft: 2
+  Powers:
+    - Lend Aid
+    - Attack, Mystic
+    - Attack, Mystic Entangle
+    - Heal
+    - Shield, Others
+    - Lend Vigor
+    - Outsider
+    - Clumsy, Minor
+
+Spades1:
+  id: Spades1
+  Name: Spades1
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Martial
+  Level: 1
+  Primary_Skill: AGL
+  HP: 5
+  AP: 0
+  PP: 4
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 2
+    CON: 0
+    GUT: 1
+    INT: 0
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: 2
+    Stealth: 2
+    Investigation: 1
+    Detection: 1
+    Craft: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Charge
+    - Attack, Sweep
+    - Stealthy Surprise
+    - Outsider
+    - Eye for an Eye
+
+Spades2:
+  id: Spades2
+  Name: Spades2
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Martial
+  Level: 2
+  Primary_Skill: AGL
+  HP: 7
+  AP: 0
+  PP: 4
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 2
+    CON: 0
+    GUT: 1
+    INT: 0
+    STR: 0
+    VIT: 1
+  Skills:
+    Finesse: 2
+    Stealth: 2
+    Investigation: 1
+    Detection: 1
+    Craft: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Charge
+    - Attack, Sweep
+    - Stealthy Surprise
+    - Stealth in the Shadows
+    - Outsider
+    - Eye for an Eye
+
+Spades3:
+  id: Spades3
+  Name: Spades3
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Martial
+  Level: 3
+  Primary_Skill: AGL
+  HP: 8
+  AP: 0
+  PP: 4
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 2
+    CON: 0
+    GUT: 1
+    INT: 0
+    STR: 0
+    VIT: 1
+  Skills:
+    Finesse: 2
+    Stealth: 2
+    Bluffing: 1
+    Investigation: 1
+    Detection: 1
+    Craft: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Charge
+    - Attack, Sweep
+    - Attack, Vengeance
+    - Stealthy Surprise
+    - Stealth in the Shadows
+    - Outsider
+    - Eye for an Eye
+
+Crusader1:
+  id: Crusader1
+  Name: Crusader1
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 1
+  Primary_Skill: STR
+  HP: 6
+  AP: 2
+  PP: 2
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 0
+    GUT: 0
+    INT: 0
+    STR: 2
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Athletics: 2
+    Brute: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Momentum
+    - Shield, Self
+    - Oath
+    - Savior
+
+Crusader2:
+  id: Crusader2
+  Name: Crusader2
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 2
+  Primary_Skill: STR
+  HP: 7
+  AP: 2
+  PP: 3
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 0
+    GUT: 0
+    INT: 0
+    STR: 2
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Detection: 1
+    Athletics: 2
+    Brute: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Aura of Defensive Damage
+    - Shield, Self
+    - Momentum
+    - Battlecharged
+    - Oath
+    - Savior
+
+Crusader3:
+  id: Crusader3
+  Name: Crusader3
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 3
+  Primary_Skill: STR
+  HP: 8
+  AP: 2
+  PP: 6
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 0
+    GUT: 0
+    INT: 0
+    STR: 2
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Detection: 1
+    Athletics: 2
+    Brute: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Aura of Defensive Damage
+    - Aura of Regeneration
+    - Shield, Self
+    - Staggering Blow
+    - Momentum
+    - Oath
+    - Savior
+
+Summoner1:
+  id: Summoner1
+  Name: Summoner1
+  Type: PC
+  Pronouns: "She/Her"
+  Role: Caster
+  Level: 1
+  Primary_Skill: INT
+  HP: 6
+  AP: 0
+  PP: 3
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: 0
+    CON: 0
+    GUT: 0
+    INT: 2
+    STR: -2
+    VIT: 1
+  Skills:
+    Bluffing: 1
+    Knowledge: 2
+    Investigation: 2
+    Athletics: -2
+    Brute: -2
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Cone
+    - Attack, Mystic Entangle
+    - Lucky
+    - Wanted
+    - Weak, Major
+
+Summoner2:
+  id: Summoner2
+  Name: Summoner2
+  Type: PC
+  Pronouns: "She/Her"
+  Role: Caster
+  Level: 2
+  Primary_Skill: INT
+  HP: 7
+  AP: 0
+  PP: 5
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: 0
+    CON: 0
+    GUT: 0
+    INT: 2
+    STR: -2
+    VIT: 1
+  Skills:
+    Bluffing: 2
+    Knowledge: 2
+    Investigation: 2
+    Athletics: -2
+    Brute: -2
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Cone
+    - Attack, Mystic Entangle
+    - Summon Creature
+    - Lucky
+    - Wanted
+    - Weak, Major
+
+Summoner3:
+  id: Summoner3
+  Name: Summoner3
+  Type: PC
+  Pronouns: "She/Her"
+  Role: Caster
+  Level: 3
+  Primary_Skill: INT
+  HP: 8
+  AP: 0
+  PP: 5
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: 0
+    CON: 0
+    GUT: 0
+    INT: 2
+    STR: -2
+    VIT: 1
+  Skills:
+    Bluffing: 1
+    Knowledge: 2
+    Investigation: 2
+    Athletics: -2
+    Brute: -2
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Cone
+    - Attack, Mystic Entangle
+    - Summon Creature
+    - Life Link
+    - Phase Swap
+    - Lucky
+    - Wanted
+    - Weak, Major
+
+Alchemist1:
+  id: Alchemist1
+  Name: Alchemist1
+  Type: PC
+  Pronouns: "They/Them"
+  Role: Support
+  Level: 1
+  Primary_Skill: GUT
+  HP: 5
+  AP: 0
+  PP: 2
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: -2
+    CON: 0
+    GUT: 2
+    INT: 0
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: -2
+    Stealth: -2
+    Bluffing: 1
+    Detection: 2
+    Craft: 2
+  Powers:
+    - Lend Aid
+    - Attack, Mystic
+    - Shield, Others
+    - Cowardly Ally
+    - Clumsy, Major
+
+Alchemist2:
+  id: Alchemist2
+  Name: Alchemist2
+  Type: PC
+  Pronouns: "They/Them"
+  Role: Support
+  Level: 2
+  Primary_Skill: GUT
+  HP: 6
+  AP: 0
+  PP: 4
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: -2
+    CON: 0
+    GUT: 2
+    INT: 0
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: -2
+    Stealth: -1
+    Bluffing: 1
+    Detection: 2
+    Craft: 2
+  Powers:
+    - Lend Aid
+    - Attack, Mystic
+    - Shield, Others
+    - Create Potion
+    - Cowardly Ally
+    - Clumsy, Major
+
+Alchemist3:
+  id: Alchemist3
+  Name: Alchemist3
+  Type: PC
+  Pronouns: "They/Them"
+  Role: Support
+  Level: 2
+  Primary_Skill: GUT
+  HP: 7
+  AP: 0
+  PP: 6
+  AR: 3
+  Speed: 6
+  Attribs:
+    AGL: -2
+    CON: 0
+    GUT: 2
+    INT: 0
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: -2
+    Stealth: -2
+    Bluffing: 1
+    Detection: 2
+    Craft: 2
+  Powers:
+    - Lend Aid
+    - Attack, Mystic
+    - Shield, Others
+    - Create Potion
+    - Create Poison
+    - Potent Brew
+    - Cowardly Ally
+    - Clumsy, Major
+
+Assassin1:
+  id: Assassin1
+  Name: Assassin1
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Martial
+  Level: 1
+  Primary_Skill: AGL
+  HP: 5
+  AP: 0
+  PP: 2
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 2
+    CON: 0
+    GUT: 1
+    INT: 1
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: 2
+    Stealth: 2
+    Knowledge: 1
+    Investigation: 2
+    Detection: 1
+    Craft: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Charge
+    - Stealthy Surprise
+    - Vendetta
+    - Eye for an Eye
+
+Assassin2:
+  id: Assassin2
+  Name: Assassin2
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Martial
+  Level: 2
+  Primary_Skill: AGL
+  HP: 6
+  AP: 0
+  PP: 3
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 2
+    CON: 0
+    GUT: 1
+    INT: 1
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: 2
+    Stealth: 2
+    Knowledge: 1
+    Investigation: 2
+    Detection: 1
+    Craft: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Charge
+    - Stealthy Surprise
+    - Stealth's Call
+    - Hidden Strike
+    - Vendetta
+    - Eye for an Eye
+
+Assassin3:
+  id: Assassin3
+  Name: Assassin3
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Martial
+  Level: 3
+  Primary_Skill: AGL
+  HP: 7
+  AP: 0
+  PP: 5
+  AR: 2
+  Speed: 6
+  Attribs:
+    AGL: 2
+    CON: 0
+    GUT: 1
+    INT: 1
+    STR: 0
+    VIT: 0
+  Skills:
+    Finesse: 2
+    Stealth: 2
+    Knowledge: 1
+    Investigation: 2
+    Detection: 1
+    Craft: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Charge
+    - Stealthy Surprise
+    - Stealth's Call
+    - Hidden Strike
+    - Vanishing Step
+    - Keen Eye
+    - Vendetta
+    - Eye for an Eye

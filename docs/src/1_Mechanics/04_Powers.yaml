@@ -736,8 +736,7 @@ Stealth's Blessing:
     XP: 2
     PP: [1,2]
     Prereq:
-        Level: 2
-    Prereq:
+        Level: 2  
         Skill: Stealth > 2
     Tags:
         - Stealth

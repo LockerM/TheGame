@@ -86,7 +86,7 @@ Horse:
     - Attack, Weapon
     - Pack Tactics
 
-Wolf:
+Gray Wolf:
   Type: NPC
   HP: 2
   AR: 3
@@ -237,7 +237,6 @@ Mystic, Caster:
   HP: 5
   PP: 2
   AR: 3
-  PP: 3
   Attribs:
     AGL: -1
     CON: 1
@@ -255,7 +254,6 @@ Mystic, Caster:
 
 Sentinel, Martial:
   Type: Dealer
-  Level: 2
   Level: 2
   HP: 6
   AP: 0
